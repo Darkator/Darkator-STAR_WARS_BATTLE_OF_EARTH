@@ -92,3 +92,40 @@ interceptor=blaster
 transporter=blaster
 decimator=flamebomb blaster
 stricker=blaster
+
+[heals]
+        value=500
+        id=healing
+        affect_allies=yes
+        name= _ "carrier"
+        female_name= _ "carrier"
+        description=_"planes can land on board (heals +500)"
+        affect_self=no
+        poison=cured
+		
+        [affect_adjacent]
+            adjacent=n,ne,se,s,sw,nw
+        [/affect_adjacent]
+        
+        [filter]
+			[filter_adjacent]
+				race=aircraft
+			[/filter_adjacent]
+		[/filter]
+     [/heals]
+    [/abilities]
+    [heals]
+        id=healing
+        name= _ "repair"
+	value=1000
+	description= _ "This unit heals friendly adjacent mechanical units at the beginning of its turn."
+	
+	poison=cured
+	[affect_adjacent]
+	    adjacent=n,ne,se,s,sw,nw
+	    [filter]
+		race=aircraft
+        id=fa18hornet2
+	    [/filter]
+	[/affect_adjacent]
+    [/heals]
