@@ -129,3 +129,9 @@ stricker=blaster
 	    [/filter]
 	[/affect_adjacent]
     [/heals]
+    usage=scout
+    usage=fighter
+    usage=archer
+    usage=mixed fighter
+    usage=healer
+    usage=
