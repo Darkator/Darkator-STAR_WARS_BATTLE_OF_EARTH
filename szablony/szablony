@@ -135,3 +135,149 @@ stricker=blaster
     usage=mixed fighter
     usage=healer
     usage=
+
+
+
+    HP skal
+    base and parts of crusier = 500 
+    ships = 350-450
+    bombowce = 200-300
+    space transporter=125-175
+    space figther = 50
+     Samoloty:
+        wielozadaniowe=50
+        przewwagi=40
+        szturmowe=60
+
+
+        DAMAGE
+miniguns
+        name=Vulcan
+        type=pierce
+        range=melee
+        damage=3
+        number=9
+        accuracy=30%
+        icon="attacks/minigun.png"
+missle
+    short range
+        damage=25
+        type=cold
+        number=1
+    miedimu range
+     damage=50
+     numder=2
+     accuary=30%
+    long range
+            name=aim-54
+            type=cold
+            rang=missle_long
+        damage=100
+        number=1   
+        accuracy=20%
+        icon="attacks/rockemissle.png"
+    Bomb
+        damage=35
+        accruary tak żeby było na 100% marsksman + 40%
+        number=2
+    rocket powietrze-ziemia
+     nie naprowadzne
+    accruary z marksman
+    damage=20
+    number=10
+    nabrowadzane 
+    accruary tak żeby było 100%
+    damage=30
+    number=4
+
+    parts crusier
+        działka:
+        damage=20
+        number=8
+        acruary=90% tak żeby było 90% 
+        range bomb
+
+        damage 40
+        number=8
+        acruary=90% tak żeby było 90% 
+        range=melee
+
+        rakiety
+        damage=40
+        number=3
+        type=cold
+        range=bomb
+        acruary=90% tak żeby było 90% 
+
+        damage=40
+        number=4
+        type=cold
+        range=ranged
+        acruary=90% tak żeby było 90% 
+
+        ships and base
+        
+        name=Phalanx
+        type=pierce
+        range=melee
+        damage=8
+        number=15
+        accuracy=90% 
+        icon="attacks/minigun.png"
+        [specials]
+        {WEAPON_SPECIAL_FIRSTSTRIKE}
+        [/specials]
+    
+
+    
+    
+        name=SeaRAM
+        type=cold
+        range=missle
+        damage=30
+        number=4
+        accuracy=100%
+        icon="attacks/rockemissle.png"
+        [specials]
+        {WEAPON_SPECIAL_FIRSTSTRIKE}
+        [/specials]
+    
+        name=Phalanx
+        type=pierce
+        range=bomb
+        damage=8
+        number=10
+        accuracy=90% 
+        icon="attacks/minigun.png"
+        [specials]
+        {WEAPON_SPECIAL_FIRSTSTRIKE}
+        [/specials]
+   
+        name=SeaRAM
+        type=cold
+        range=bomb
+        damage=30
+        number=6
+        accuracy=100%
+        icon="attacks/rockemissle.png"
+        [specials]
+        {WEAPON_SPECIAL_FIRSTSTRIKE}
+        [/specials]
+        ships
+        cannons:
+        406 mm 
+        d=40
+        n=9
+        acruary atak żeby było 90%
+        oto melera
+        n=4
+        t=fire
+        damage=20
+        100% tak żeby było
+        tomahawk
+        75
+        number=2
+        pocisk balistycz dołodzi atomowej
+        damage=200
+        number=1
+        100% tak żeby było 100%
