@@ -180,11 +180,14 @@ missle
         damage=35
         accruary tak żeby było na 100% marsksman + 40%
         number=2
+
     rocket powietrze-ziemia
+
      nie naprowadzne
     accruary z marksman
     damage=20
     number=10
+    
     nabrowadzane 
     accruary tak żeby było 100%
     damage=30
