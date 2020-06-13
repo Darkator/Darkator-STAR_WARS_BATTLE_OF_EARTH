@@ -8,14 +8,16 @@ The raise is done by air, so the units are space fighters, fighters, cruiser par
 examples of units are:
 f-35,f-22a,j-20 shendugu,j-31 shenjang and su-57
 
-Warning: AI dedication long time for selection unit recruit.
+tie figther, tie advanced, tie defender, tie phantom, tie stricker
+
+Warning: AI dedication long time for selection unit recruit.(repaired)
 "
 email="geniusze.kamuflazu@gmail.com"
 icon="units/Hwing2.png"
 passphrase="XXX"
 title="TOP GUN"
 type="era"
-version="0.1.9"
+version="0.1.10"
 [feedback]
 	 topic_id=52594
 [/feedback]
