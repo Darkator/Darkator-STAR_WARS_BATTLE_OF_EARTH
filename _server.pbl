@@ -17,7 +17,7 @@ icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAVRnpU
 passphrase="XXX"
 title="TOP GUN"
 type="era"
-version="0.1.12"
+version="0.1.14"
 [feedback]
 	 topic_id=52594
 [/feedback]
