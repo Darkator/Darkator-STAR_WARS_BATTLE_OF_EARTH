@@ -284,3 +284,94 @@ missle
         damage=200
         number=1
         100% tak żeby było 100%
+
+
+
+####################### FUEL MECHANIC TEST
+[event]
+        name=new turn
+        first_time_only=yes
+        id=FUEL
+        [modify_unit]
+            [filter]
+                variable=FUEL
+            [/filter]
+            [set_variable]
+                name=FUEL
+                value={CAPICY}
+                id=FUEL
+            [/set_variable]
+        [/modify_unit]
+[/event]
+[event]
+        name=new turn
+        first_time_only=no
+        id=FUEL
+        [modify_unit]
+            [filter]
+                variable=FUEL
+            [/filter]
+            [set_variable]
+                name = FUEL
+                sub = 1
+            [/set_variable]
+        [/modify_unit]
+        [if]
+        
+            [have_unit]
+                [filter]
+                    variable=FUEL
+                [/filter]
+            [/have_unit]
+            [then]
+            
+                [modify_unit]
+                    [filter]
+                        variable=FUEL
+                    [/filter]
+                    kill=yes
+                [/modify_unit]
+            
+            [/then]
+         
+        [/if]
+[/event]
+
+###############################
+
+### PARRY   ###
+
+[abilities]
+        {AIRCRAFTTG}
+    [/abilities]
+
+    {ATTACKLONFRANGEMISSLEP PL-15 110 10%}
+    {ATTACKMIDLLERANGEMISSLEP PL-21 55 10%}
+    {ATTACKSHORTRANGEMISSLEP PL-10 25 10%}
+
+### NORMAL  ###
+
+
+
+    [abilities]
+        {AIRCRAFTTG}
+    [/abilities]
+    
+    {ATTACKLONFRANGEMISSLE NAME DAMAGE QUANTITY}
+    {ATTACKMIDLLERANGEMISSLE NAME DAMAGE QUANTITY}
+    {ATTACKSHORTRANGEMISSLE NAME DAMAGE QUANTITY}
+
+
+
+###### tankowce
+Boeing KC-135 Stratotanker
+Airbus A330 MRTT
+############
+
+
+
+#####Zasięg i Prędkość
+
+1 HEX = 100 km/h
+km / km/h:
+1000km / 100km/h
