@@ -382,3 +382,7 @@ Airbus A330 MRTT
 1 HEX = 100 km/h
 km / km/h:
 1000km / 100km/h
+
+
+############ CIWS
+{MISSLECIWS NAME DAMAGE QUANTITY}
