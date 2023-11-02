@@ -386,3 +386,131 @@ km / km/h:
 
 ############ CIWS
 {MISSLECIWS NAME DAMAGE QUANTITY}
+
+
+ [effect]
+    apply_to=image_mod
+    replace="O(0)"
+[/effect]
+[effect]
+    apply_to=image_mod
+    add="BLIT(units/monsters/water-serpent-attack-se-1.png)"
+[/effect]
+
+################## RADAR DATA
+[modify_unit]
+                [filter]
+                    [filter_location]
+                    radius=$unitR.variables.RADARRANGE
+                    x,y=$x1,$y1
+                    [/filter_location]
+                [/filter]
+                [object]
+                        duration=turn
+                        id="LOCKON"
+                        [effect]
+                            apply_to=image_mod
+                            add="BLIT(misc/LOCKON.png)"
+                        [/effect]
+                    [/object]
+            [/modify_unit]
+
+
+            [item]
+                name=LOCKONIMAGE
+                
+                image="misc/LOCKON.png"
+            [/item]
+
+            $unitL.x
+
+
+#ifdef TGUTILS
+        {RADAR 0 a10thunderboltii2}
+        {FUELATRIBUTE 10 a10thunderboltii2}
+    #endif
+
+
+
+
+    ###STEALTH
+    #define STEALTHSTE RANGE TYPE
+[event]
+    name=moveto
+    
+    [store_unit]
+        [filter]
+            ability=STELTH
+            type={TYPE}
+        [/filter]
+        variable=unitST
+    [/store_unit]
+    [if]
+        [have_unit]
+            [filter_location]
+                x=$unitST[$i].x
+                y=$unitST[$i].y
+                radius={RANGE}
+            [/filter_location]
+        [/have_unit]
+        [then]
+
+        [/then]
+    [/if]
+[/event]
+#enddef
+
+
+
+
+[hides]
+        id=STELTH
+        name= _ "Stealth"
+        female_name= _ "Stealth"
+        description=  _ "Stealth"
+        alert="You See This"
+        affect_self=yes
+        [filter] 
+            [filter_location] 
+                [not] 
+                    [filter_adjacent_location] 
+                        [filter_adjacent_location] 
+                            [filter]
+                                is_enemy=yes
+                                [not] 
+                                    ability=stealth 
+                                [/not]
+                            [/filter]
+                        [/filter_adjacent_location]
+                    [/filter_adjacent_location]
+                [/not]
+            [/filter_location]
+        [/filter]
+    [/hides]
+
+
+    #define ABILITY_TGA_KAMIKAZE
+    [dummy]
+        id=TGA_kamikaze
+        name= _ "Long Range Missle"
+        description=_"Is missle"
+    [/dummy] # wmlxgettext: [abilities]
+[/abilities]
+
+[event]
+    name=attack_end
+    id=TGA_kamikaze_event
+    first_time_only=no
+    [filter]
+        ability=TGA_kamikaze
+        x,y=$x1,$y1
+    [/filter]
+    [kill]
+        x,y=$x1,$y1
+        animate=no
+        fire_event=yes
+    [/kill]
+[/event]
+
+[+abilities] # wmlxgettext: [/abilities]
+#enddef
